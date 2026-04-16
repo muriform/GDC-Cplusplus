@@ -32,33 +32,34 @@ int main() {
 
     cout << "\tWelcome to 'Guess the Word!'\n";
 
-    cout << "\tReady to Play?\n";
+    cout << "\tType 'Start' to Play\n";
     getline(cin, input);
 
-    if(input == "yes") {
-        cout << "\tAwesome! Would you like a beginner's hint?\n";
+    if(input == "Start") {
+        cout << "\tWelcome! Would you like a beginner's hint? 'Y/N'\n";
         getline(cin, input);
 
-        if(input == "yes") {
+        if(input == "Y") {
             cout << "\tOkay! Please provide your payment details to compensate for the hint.\n";
             getline(cin, input);
+
+            cout << "\tThank you for your payment. You now have 10 tickets to draw a beginner's hint!\n";
 
 
         }
 
-        if(input == "no") {
+        if(input == "N") {
             cout << "\tOkay! Let's start guessing!\n";
+
+        
 
 
         }
 
       
-    }   // end of: starting if yes
+    }   // end of: input start
 
-    if(input == "no") {
-        cout << "\tGoodbye!\n";
 
-    }
 
     return 0;
 
