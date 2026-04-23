@@ -9,18 +9,18 @@
 #include <vector>
 #include <algorithm>
 #include <unordered_map>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
 vector<string>::iterator iter;
 
+string input;
 
-int main() {
 
-    string input;
-
-     std::unordered_map<std::string, std::string> wordbank =
-    {
+ std::unordered_map<std::string, std::string> wordbank =
+  {
         {"HELLO", "5-letter word"},
         {"GREEN", "5-letter word"},
         {"ADIEU", "5-letter word"},
@@ -30,7 +30,9 @@ int main() {
         {"MINOR", "5-letter word"}
     };
 
-    cout << "\tWelcome to 'Guess the Word!'\n";
+
+void start() {
+cout << "\tWelcome to 'Guess the Word!'\n";
 
     cout << "\tType 'Start' to Play\n";
     getline(cin, input);
@@ -50,14 +52,17 @@ int main() {
 
         if(input == "N") {
             cout << "\tOkay! Let's start guessing!\n";
-
-        
-
-
         }
 
-      
-    }   // end of: input start
+}     // end of: input start
+
+}     // end of: start()
+
+
+int main() {
+
+
+start();
 
 
 
@@ -66,4 +71,4 @@ int main() {
 
 
 
-}      // end of: main
+}      // end of: main()
